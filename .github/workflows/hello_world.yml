@@ -9,7 +9,6 @@ on:
     branches: 
     - master
     - develop
-    
   pull_request:
     branches: [ master ]
 
@@ -41,9 +40,16 @@ jobs:
                   
   hello-world-windows:
      name: Hello World Windows
-     needs: [ hello-world-ubuntu ]
      runs-on: windows-latest
       
      steps:
       - name: Print Hello world Windows
         run: echo 'Hello world rodando no windows'
+        
+  hello-world-macos:
+    name: Hello World MacOS
+    needs: [ hello-world-ubuntu, hello-world-windows ]
+    runs-on: macos-latest
+    steps:
+      - name: Print hello world MacOS
+        run: echo 'Hello World rodando no MacOS
