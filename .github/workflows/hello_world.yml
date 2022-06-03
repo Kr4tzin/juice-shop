@@ -52,4 +52,4 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Print hello world MacOS
-        run: echo 'Hello World rodando no MacOS
+        run: echo 'Hello World rodando no MacOS'
